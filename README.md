@@ -38,7 +38,7 @@
 
 ```bash
 # Клонировать репозиторий
-git clone https://github.com/YOUR_USERNAME/AI_Car_Detail.git
+git clone https://github.com/Bobidze/AI_Car_Detail.git
 cd AI_Car_Detail
 
 # Запустить (Python 3.10+, без внешних зависимостей)
