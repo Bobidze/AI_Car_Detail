@@ -10,7 +10,7 @@
 
 ## 📸 Скриншот
 
-![Скриншот приложения](screenshots/screenshot.png)
+![Скриншот приложения](screenshots/Screen.PNG)
 
 ## Основные возможности
 
