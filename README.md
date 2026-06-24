@@ -16,7 +16,7 @@
 
 ### Анализ автомобиля (ввод данных)
 ![ Анализ авто 1 ](screenshot/Example1.PNG)
-![ Анализ авто 2 ](screenshot/Example1.PNG)
+![ Анализ авто 2 ](screenshot/Example2.PNG)
 ![ Анализ авто 3 ](screenshot/Example3.PNG)
 
 ### Результаты работы нейросети
