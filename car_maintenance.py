@@ -75,7 +75,7 @@ COLORS = {
     "ai_text_bg":   "#F8FFFE",
 }
 
-ENGINE_TYPES = ["Бензин", "Дизель"]
+ENGINE_TYPES = ["Бензин", "Дизель", "Гибрид", "Электро"]
 DEEPSEEK_URL  = "https://api.deepseek.com/chat/completions"
 DEEPSEEK_MODEL = "deepseek-chat"
 
@@ -543,9 +543,24 @@ class App:
                      lambda e: self.canvas.configure(scrollregion=self.canvas.bbox("all")))
         self.canvas.bind("<Configure>",
                          lambda e: self.canvas.itemconfig(self._cw, width=e.width))
-        self.canvas.bind("<MouseWheel>",
-                         lambda e: self.canvas.yview_scroll(-int(e.delta/120), "units"))
+
+        # Глобальный скролл: привязка ко всему окну, а не только к canvas
+        self.root.bind_all("<MouseWheel>", self._on_mousewheel)
         self._show_placeholder()
+
+    # ------------------------------------------------------------------
+    # СКРОЛЛ
+    # ------------------------------------------------------------------
+
+    def _on_mousewheel(self, event):
+        # Не перехватывать скролл у ScrolledText (AI-ответ) — у него свой
+        w = event.widget
+        try:
+            if isinstance(w, tk.Text) or w.master and isinstance(w.master, scrolledtext.ScrolledText):
+                return
+        except (AttributeError, tk.TclError):
+            pass
+        self.canvas.yview_scroll(-int(event.delta / 120), "units")
 
     # ------------------------------------------------------------------
     # ВСПОМОГАТЕЛЬНЫЕ ВИДЖЕТЫ
