@@ -12,15 +12,15 @@
 ## 📸 Скриншоты
 
 ### Главный экран приложения
-![ Главный экран ](screenshot/main.png)
+![ Главный экран ](screenshot/Main.PNG)
 
 ### Анализ автомобиля (ввод данных)
-![ Анализ авто 1 ](screenshot/Example1.png)
-![ Анализ авто 2 ](screenshot/Example1.png)
-![ Анализ авто 3 ](screenshot/Example3.png)
+![ Анализ авто 1 ](screenshot/Example1.PNG)
+![ Анализ авто 2 ](screenshot/Example1.PNG)
+![ Анализ авто 3 ](screenshot/Example3.PNG)
 
 ### Результаты работы нейросети
-![ Ответ ИИ ](screenshot/DeepseeEx.png)
+![ Ответ ИИ ](screenshot/DeepseeEx.PNG)
 
 ## О проекте
 
